@@ -1,0 +1,53 @@
+//Here we create property NFTs . 
+
+
+const storeNFTs = [];
+
+function mintNFT (_name , _location , _type , _size , _price , )
+  {
+    const property= 
+{
+    Name : _name , 
+    Location : _location ,
+    Type : _type ,
+    Size : _size , 
+    Price : _price
+};
+storeNFTs.push(property);
+console.log("Minted : " + _name);
+}
+
+function printNFTs ()
+{
+    
+for(let i = 0 ;i<storeNFTs.length ; i++)
+{
+    console.log("\n property ID : " + (i+1));
+    console.log("Property Name : " + storeNFTs[i].Name);
+    console.log("Property Location : " + storeNFTs[i].Location);
+    console.log("Property Type : " + storeNFTs[i].Type);
+    console.log("Property Size : " + storeNFTs[i].Size);
+    console.log("Property Price : " + storeNFTs[i].Price);
+}
+}
+
+
+
+function totalNFTs ()
+{
+    console.log("\n Total number of NFTs minted : " + storeNFTs.length);
+}
+
+
+
+
+mintNFT("Amayra" , "Delhi" , "Rent" , "100 acres" , "40 crores");
+mintNFT("Nature" , "Mumbai" , "Rent" , "80 acres" , "35 crores");
+mintNFT("Heart" , "Banglore" , "Sale" , "120 acres" , "50 crores");
+mintNFT("Heaven" , "Patna" , "Sale" , "150 acres" , "60 crores");
+mintNFT("Ganga" , "Hyderabad" , "Sale" , "550 acres" , "80 crores");
+mintNFT("Royal" , "Gopalganj" , "Sale" , "800 acres" , "100 crores");
+
+printNFTs();
+
+totalNFTs();
